@@ -14,9 +14,6 @@ public class TestRegisterController {
 
     private final AuthenticationService authenticationService;
 
-
-
-
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(
             @RequestBody RegisterRequest request

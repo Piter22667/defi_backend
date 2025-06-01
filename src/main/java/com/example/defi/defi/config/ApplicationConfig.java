@@ -28,8 +28,7 @@ public class ApplicationConfig {
                  return userRepository.findByEmail(username).orElseThrow(() -> new UsernameNotFoundException("User not found"));
              }
          };
-    } //створено для реалізаці ції UserDetailsService, щоб мати можливість завантажувати користувача з бази даних за його електронною адресою
-    // Дозволяє Spring Security знаходити користувача у базі даних за email (username) під час аутентифікації.
+    } //використовується для завантаження користувача за його email
 
     @Bean
     public AuthenticationProvider authenticationProvider() {
@@ -39,7 +38,7 @@ public class ApplicationConfig {
         return daoAuthenticationProvider;
     }
     // відповідає за перевірку логіну і пароля користувача, перевіряє, чи спідвпадає пароль користувача
-    // з паролем, що зберігається в базі даних, використовуючи PasswordEncoder для шифрування пароля
+    // з паролем, що зберігається в бд, використовуючи PasswordEncoder для шифрування пароля
 
 
 
@@ -48,7 +47,6 @@ public class ApplicationConfig {
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
     }
-    //
 
 
     @Bean

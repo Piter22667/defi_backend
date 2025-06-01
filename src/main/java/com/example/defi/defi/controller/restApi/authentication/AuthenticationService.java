@@ -55,5 +55,5 @@ public class AuthenticationService {
         return AuthenticationResponse.builder()
                 .token(jwtToken)
                 .build();
-    }// аутентифікуємо користувача за email та паролем і повертаємо токен
+    }// автентифікуємо користувача за email та паролем і повертаємо токен
 }

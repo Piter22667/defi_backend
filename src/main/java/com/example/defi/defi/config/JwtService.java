@@ -37,10 +37,10 @@ public class JwtService {
                 .build()
                 .parseClaimsJws(jwt)
                 .getBody();
-        //Jwts.parser() створює парсер для розбору JWT-токена
-        //.setSigningKey(getSigningKey()) — встановлює ключ для перевірки підпису токена
-        //.parseClaimsJws(jwt) — розбирає токен і повертає об'єкт Jws<Claims>, який містить заголовок, підпис і claims
-        //.getBody() — отримує тіло токена (claims) з об'єкта Jws<Claims>, яке містить інформацію про користувача та інші дані, закодовані в токені
+        //Jwts.parser створює парсер для jwt токена
+        //.setSigningKey(getSigningKey()) встановлює ключ для перевірки підпису токена
+        //.parseClaimsJws(jwt)  розбирає токен і повертає об'єкт Jws<Claims>, який містить заголовок, підпис і claims
+        //.getBody отримує тіло токена (claims) з об'єкта Jws<Claims>, яке містить інформацію про користувача та інші дані, закодовані в токені
     }
 
 

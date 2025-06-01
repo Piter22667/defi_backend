@@ -36,7 +36,7 @@ public class SecurityConfiguration {
                         .anyRequest().authenticated())
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Вказуємо, що сесії не використовуються, once per request filter ідея
-                .authenticationProvider(authenticationProvider) // Додаємо наш кастомний провайдер аутентифікації
+                .authenticationProvider(authenticationProvider) // Додаємо  кастомний провайдер аутентифікації
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class); // Додаємо фільтр перед UsernamePasswordAuthenticationFilter
 
 
